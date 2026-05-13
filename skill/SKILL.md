@@ -204,9 +204,13 @@ From the 200-day daily window. Applies to all asset types.
 
 1. Identify swing highs: candle whose High exceeds every High in 5 bars left and 5 bars right. Symmetric for swing lows.
 2. Cluster swings within ±0.5% of each other into single zones.
-3. Score zones by: (a) number of touches, (b) recency.
-4. Select **S1 (immediate) + S2 (intermediate)** and **R1 (immediate) + R2 (intermediate)** only. No additional tiers.
-5. Round to trader-friendly values per asset scale — see Numerical Formatting Rules.
+3. PROXIMITY FILTER (apply before scoring):
+   - Support candidates: keep only clustered zones whose midpoint is BELOW current price.
+   - Resistance candidates: keep only clustered zones whose midpoint is ABOVE current price.
+4. Sort each filtered set by distance from current price ascending (nearest first).
+5. Score within the filtered + sorted set by: (a) number of touches, (b) recency.
+6. Select S1 (nearest support), S2 (second-nearest support), R1 (nearest resistance), R2 (second-nearest resistance). No additional tiers.
+7. Round to trader-friendly values per asset scale — see Numerical Formatting Rules.
 
 ### Step 4b: R/R Calculation and Setup Grade
 
