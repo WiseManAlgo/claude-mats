@@ -62,7 +62,7 @@ See [`skill/examples/`](skill/examples/) for full worked examples (BTC + AAPL).
 
 - Python 3.8+
 - Claude Code — [install here](https://claude.ai/code)
-- Dependencies (auto-installed): `yfinance`, `pandas-ta`, `pandas`
+- Dependencies (auto-installed): `yfinance`, `pandas-ta`, `pandas`, `akshare`
 
 ---
 
@@ -99,6 +99,9 @@ python3 install_mats_skill.py --verify   # check installation + dependencies
 /mats NVDA         # US equity
 /mats 700          # HK equity — auto-pads to 0700.HK (Tencent)
 /mats 9988         # HK equity (Alibaba HK)
+/mats 300782       # China A-share (Maxscend Microelectronics, ChiNext)
+/mats 600519       # China A-share (Kweichow Moutai, SSE)
+/mats 000001       # China A-share (Ping An Bank, SZSE)
 ```
 
 Natural language also works:
@@ -113,11 +116,12 @@ Run a report on 700
 
 ## Asset Coverage
 
-| Asset class | Example inputs | yfinance symbol | Currency |
+| Asset class | Example inputs | Data source | Currency |
 |---|---|---|---|
-| Crypto | `BTC`, `ETH`, `SOL`, `PEPE` | `{SYMBOL}-USD` | USD |
-| US equity | `AAPL`, `NVDA`, `TSLA` | Direct ticker | USD |
-| HK equity | `700`, `0700`, `9988` | `{SYMBOL}.HK` (auto-padded) | HKD |
+| Crypto | `BTC`, `ETH`, `SOL`, `PEPE` | yfinance (`{SYMBOL}-USD`) | USD |
+| US equity | `AAPL`, `NVDA`, `TSLA` | yfinance (direct ticker) | USD |
+| HK equity | `700`, `0700`, `9988` | yfinance (`{SYMBOL}.HK`) | HKD |
+| China A-share | `300782`, `600519`, `000001` | AkShare (East Money) | CNY ¥ |
 
 ---
 
@@ -142,7 +146,7 @@ Most Claude Code trading skills cover US equities or crypto only. MATS handles H
 
 ## Key Design Decisions
 
-**Data stack:** yfinance + pandas-ta + hand-coded KDJ — free, public, no auth required
+**Data stack:** yfinance + AkShare + pandas-ta + hand-coded KDJ — free, public, no auth required. AkShare (East Money / 东方财富) provides China A-share OHLCV and fundamentals; yfinance covers all other asset classes.
 
 **Weekly trend:** WMA50 + WMA200 on a 5-year weekly fetch. Guard for assets with fewer than 100 weekly bars.
 
@@ -161,6 +165,7 @@ Most Claude Code trading skills cover US equities or crypto only. MATS handles H
 | RSI/MACD variance ±5–15pt | Due to smoothing differences vs other platforms. Directional signals reliable; documented in every report footnote |
 | yfinance data quality | Occasional bad OHLCV points. Sanity check recommended: reject if daily range > 20% |
 | HK fundamentals sparse | yfinance .info coverage weaker for HKEX. Web fallback runs automatically |
+| China A-share via AkShare | Data sourced from East Money (东方财富). Analyst target unavailable from AkShare — web fallback always runs |
 | Daily candles only | Intraday timeframes out of scope — use TradingView |
 | No live on-chain metrics | Sourced from news commentary only |
 

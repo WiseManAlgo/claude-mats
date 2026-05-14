@@ -20,7 +20,7 @@ Near-term (48h) catalysts only. Apply materiality filter before selecting final 
 
 ### Technical
 - Price above SMA20, SMA50, and SMA200 (full bull stack confirmed)
-- Breakout above 52-week high on volume > 1.5× 20-day average
+- Breakout above 52-week high on volume > 1.5x 20-day average
 - RSI in healthy range (50–65) with upward momentum
 - MACD histogram expanding (acceleration — not decelerating)
 - KDJ K crossed above D (short-term momentum confirmation)
@@ -69,13 +69,13 @@ Near-term risks only. Materiality filter applies.
 | Analyst mean target | `targetMeanPrice` | Often None for HK stocks |
 | 20-day avg volume | `averageVolume` | In shares |
 
-**HK stock note:** yfinance `.info` coverage is materially sparser for HKEX listings. Expect more None values — trigger web fallback accordingly. Prices returned in HKD.
+HK stock note: yfinance .info coverage is materially sparser for HKEX listings. Expect more None values — trigger web fallback accordingly. Prices returned in HKD.
 
 ---
 
 ## Web Search Fallback Queries
 
-Triggered when `.info` returns None. Cap total fallback searches at 3 per report.
+Triggered when .info returns None. Cap total fallback searches at 3 per report.
 Also always run the bottom two (ROE, earnings) regardless of None status.
 
 | Trigger | Search query |
@@ -86,14 +86,49 @@ Also always run the bottom two (ROE, earnings) regardless of None status.
 | ROE — always run | `{TICKER} return on equity ROE {year}` |
 | Earnings beat/miss — always run | `{TICKER} earnings beat miss consensus Q{N} {year}` |
 
-Remaining None fields after cap → `Data not available` in report.
+Remaining None fields after cap → Data not available in report.
 
 ---
 
 ## Trusted News Sources
 
-**US equities:** Reuters (reuters.com), Bloomberg (bloomberg.com), CNBC (cnbc.com), Barron's (barrons.com)
+US equities: Reuters (reuters.com), Bloomberg (bloomberg.com), CNBC (cnbc.com), Barron's (barrons.com)
+HK equities: SCMP (scmp.com), HKEX newsroom (hkexnews.hk), Reuters Asia
 
-**HK equities:** SCMP (scmp.com), HKEX newsroom (hkexnews.hk), Reuters Asia
+For HK stocks: check hkexnews.hk for regulatory filings and results announcements — these are primary sources.
 
-For HK stocks: check hkexnews.hk for regulatory filings and results announcements — these are primary sources. Use SCMP and Reuters as secondary commentary sources.
+---
+
+## China A-Share (AkShare)
+
+Data source: AkShare via East Money (东方财富).
+Replaces yfinance for .SZ, .SS, .SH symbols and 6-digit numeric inputs starting with 0, 3, or 6.
+
+### AkShare field reference
+
+| Field | AkShare key (info_dict) |
+|---|---|
+| Market cap | 总市值 |
+| Trailing PE | 市盈率TTM |
+| Dynamic PE | 市盈率(动) |
+| EPS TTM | 每股收益TTM |
+| PB ratio | 市净率 |
+| Dividend yield | 股息率TTM |
+| Sector | 行业 |
+| Beta | Beta |
+
+### Web search fallback queries (China A-share)
+
+| Field | Query |
+|---|---|
+| Analyst target | `{TICKER} 目标价 分析师 {year}` |
+| Earnings beat/miss | `{TICKER} 业绩 超预期 不及预期 {quarter} {year}` |
+| Insider activity | `{TICKER} 大股东 减持 增持 {year}` |
+| ROE | `{TICKER} 净资产收益率 ROE {year}` |
+
+### Trusted news sources (China A-share)
+
+Sina Finance (finance.sina.com.cn)
+East Money (eastmoney.com)
+Caixin (caixin.com) — English available
+Reuters China (reuters.com/world/china)
