@@ -2,7 +2,7 @@
 
 > **Structured trading signal briefs that tell you when NOT to trade — just as clearly as when to.**
 
-A Claude Code skill for algo traders and systematic investors. One command generates a live, data-driven signal brief across crypto, US equities, and HK equities — with enforced symmetric bull/bear analysis, R/R calculated from real support/resistance levels, and a strict no-fabrication policy.
+A Claude Code skill for algo traders and systematic investors. One command generates a live, data-driven signal brief across crypto, US equities, HK equities, and China A-shares (SSE/SZSE/ChiNext) — with enforced symmetric bull/bear analysis, R/R calculated from real support/resistance levels, and a strict no-fabrication policy. Data sourced live from yfinance (crypto/US/HK) and AkShare (China A-shares).
 
 ---
 
@@ -25,8 +25,8 @@ Most AI trading tools are cheerleaders. MATS isn't.
 
 Run `/mats [SYMBOL]` in Claude Code. It:
 
-1. **Auto-detects** asset type — crypto, US equity, or HK equity
-2. **Fetches live data** — 200-day daily OHLCV + 5-year weekly bars via yfinance
+1. **Auto-detects** asset type — crypto, US equity, HK equity, or China A-share (SSE/SZSE/ChiNext)
+2. **Fetches live data** — yfinance for crypto/US/HK; AkShare (East Money) for China A-shares. 200-day daily OHLCV + 5-year weekly bars.
 3. **Computes indicators** — RSI(14), MACD(12,26,9), KDJ(9,3,3), SMA20/50/200, weekly WMA50/WMA200
 4. **Detects S/R zones** — swing high/low clustering on 200-day window, scored by touches + recency
 5. **Calculates R/R** — from actual computed levels, not assumptions; assigns grade A/B/C
@@ -141,6 +141,9 @@ Every numerical data point in the output is tied to a yfinance result or a speci
 
 ### HK equity — rare in the Claude ecosystem
 Most Claude Code trading skills cover US equities or crypto only. MATS handles HKEX listings natively, including automatic ticker normalization (`700` → `0700.HK`) and HKD currency handling throughout the report.
+
+### China A-share support — live data via AkShare
+Most tools have no reliable China A-share coverage. MATS routes 6-digit numeric inputs (0xx, 3xx, 6xx) and .SZ/.SS/.SH symbols to AkShare automatically — pulling live data from East Money (东方财富) with forward-adjusted prices. Fundamentals fetched directly from AkShare including sector, PE, EPS, and market cap in CNY. No manual configuration needed.
 
 ---
 

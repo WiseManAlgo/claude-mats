@@ -383,6 +383,7 @@ See Report Structure section below. Match structure, density, and tone of the re
 - [ ] Grade A/B/C assigned per definition
 - [ ] Volume trigger: 1.5x 20-day avg (equity) or USD threshold (crypto)
 - [ ] Drivers: 3 per side max; near-term only; symmetry guard applied
+- [ ] Each driver ≤ 40 words including label; max 2 lines
 - [ ] Banned phrases absent
 - [ ] "24/7 market" note: crypto reports only
 - [ ] Correct disclaimer line (crypto vs securities)
@@ -534,6 +535,27 @@ If Panic AND Overexcited both fire: Panic takes precedence.
 Both sides in good faith. State imbalance explicitly if genuine. Do not pad. Do not suppress.
 - Bull case outweighs bear 4:1; only minor near-term risks identified.
 - Bear case dominates; the only constructive factor is oversold RSI.
+
+### Driver Length Rule
+Each bull or bear driver must follow this exact format:
+- **Bold label (3-5 words max):** One key data point.
+  One implication. Maximum 2 lines. Maximum 40 words total
+  per driver including the label.
+
+Bad example (too long — reject):
+- **ETF inflows sustained:** Three-week consecutive net
+  inflows of approximately $2.7B have been recorded.
+  Institutional positioning is confirmed. BlackRock and
+  Fidelity are the primary accumulators and this directly
+  signals that demand is rebuilding at current levels.
+
+Good example (correct format):
+- **ETF inflows sustained:** 3-week net inflows ~$2.7B.
+  BlackRock + Fidelity leading — institutional demand
+  confirmed at current levels.
+
+This rule applies to ALL asset classes. No exceptions.
+Violating drivers must be rewritten before output.
 
 ### Anti-Fabrication Guard
 Every data point tied to yfinance output, AkShare output, or a specific search URL. Missing: Data not available.
