@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "purpose": "Frozen regression fixture for MATS Phase 1 engine scripts (see ENGINE_ARCHITECTURE.md). LITE's 2026-07-17 session is fully closed and will not change \u2014 this file lets future changes to engine/*.py be checked against known-good numbers without re-doing live manual arithmetic or trusting session memory.",
+    "ticker": "LITE",
+    "anchor_date": "2026-07-17",
+    "fetch_period_used": "2y",
+    "created": "2026-07-23",
+    "created_by": "evidence-dialogue-loop review follow-up (3 fixes: rr_gate invariant CLI, bias_engine docstring, this fixture)",
+    "how_to_regenerate": "If a change to engine/indicators.py or engine/regime_vote.py is intentional and the new numbers are verified correct by hand, regenerate this file \u2014 do not silently edit the expected values to make a broken test pass."
+  },
+  "indicators": {
+    "current_price": 732.82,
+    "prev_close": 706.23,
+    "pct_chg": 3.77,
+    "vol_today": 4940200.0,
+    "avg_vol_20d": 4869410.0,
+    "vol_ratio": 1.015,
+    "atr14": 73.1,
+    "atr10": 72.19,
+    "ema10": 759.86,
+    "ema21": 790.79,
+    "ema21_rising_6d": false,
+    "price_above_ema21": false,
+    "ema10_above_ema21": false,
+    "sma5": 754.8,
+    "sma20": 791.57,
+    "sma50": 869.37,
+    "sma200": 572.23,
+    "sma200_available": true,
+    "rsi2": 45.55,
+    "kdj_k": 41.22,
+    "kdj_d": 42.63,
+    "kdj_j": 38.4,
+    "boll_upper": 911.56,
+    "boll_mid": 791.57,
+    "boll_lower": 671.57,
+    "boll_touch_upper": false,
+    "boll_touch_lower": true,
+    "macd_hist_last5": [
+      -3.16,
+      1.53,
+      0.68,
+      -2.51,
+      -2.38
+    ],
+    "pivot_recent": 839.88,
+    "pivot_date": "2026-07-14",
+    "gap_pct": -3.93,
+    "gap_up_unfilled": false,
+    "gap_down_unfilled": false
+  },
+  "regime": {
+    "adx": 10.5,
+    "er": 0.013,
+    "chop": 54.55,
+    "votes": {
+      "TREND": 0,
+      "RANGE": 2
+    },
+    "verdict": "RANGE"
+  },
+  "bias_cases": [
+    {
+      "initial_bias": "NEUTRAL",
+      "broad": "Risk-On",
+      "sector": "Bearish",
+      "expected_final": "NEUTRAL",
+      "expected_note_is_null": true
+    },
+    {
+      "initial_bias": "LONG",
+      "broad": "Risk-Off",
+      "sector": "Bearish",
+      "expected_final": "NEUTRAL",
+      "expected_note_is_null": false
+    },
+    {
+      "initial_bias": "NEUTRAL",
+      "broad": "Risk-Off",
+      "sector": "Bearish",
+      "expected_final": "SHORT",
+      "expected_note_is_null": false
+    },
+    {
+      "initial_bias": "LONG",
+      "broad": "Risk-On",
+      "sector": "Bullish",
+      "expected_final": "LONG",
+      "expected_note_is_null": true
+    }
+  ],
+  "rr_cases": [
+    {
+      "entry": 257.0,
+      "stop": 252.0,
+      "target": 277.0,
+      "family": "breakout",
+      "expected_rr": 4.0,
+      "expected_gate_pass": true
+    },
+    {
+      "entry": 785.77,
+      "stop": 750.0,
+      "target": 843.0,
+      "family": "pullback",
+      "expected_rr": 1.6,
+      "expected_gate_pass": false
+    }
+  ],
+  "invariant_cases": [
+    {
+      "entry": 844.0,
+      "current_price": 835.0,
+      "atr14": 71.54,
+      "status": "TRIGGERED",
+      "expected_applicable": true,
+      "expected_pass": true
+    },
+    {
+      "entry": 1200.0,
+      "current_price": 835.0,
+      "atr14": 71.54,
+      "status": "TRIGGERED",
+      "expected_applicable": true,
+      "expected_pass": false
+    },
+    {
+      "entry": 1200.0,
+      "current_price": 835.0,
+      "atr14": 71.54,
+      "status": "PENDING",
+      "expected_applicable": false
+    }
+  ]
+}

@@ -1,0 +1,2340 @@
+{
+  "_meta": {
+    "purpose": "Frozen stratified sample for MATS Phase 2 backtests (see ENGINE_ARCHITECTURE.md). DO NOT re-run sample_dataset.py to regenerate this file after any backtest has used it -- bump DATASET_VERSION and keep this file if a genuine re-sample is needed.",
+    "dataset_version": "v1",
+    "created": "2026-07-23",
+    "seed": 20260723,
+    "target_per_cell": 4,
+    "window_len_trading_days": 200,
+    "gap_days_between_windows": 400,
+    "buffer_days_after_window_end": 15,
+    "fetch_period_used": "8y",
+    "global_atr14_pct_tercile_cutoffs": {
+      "low_max": 2.405,
+      "high_min": 3.068
+    },
+    "n_tickers_fetched_successfully": 158,
+    "n_tickers_selected": 108,
+    "how_to_regenerate": "python3 sample_dataset.py -- deterministic given SEED and today's yfinance data availability; universe lists are hard-coded above."
+  },
+  "cell_summary": [
+    {
+      "sector": "Communication Services",
+      "vol_tier": "high",
+      "n_candidates": 5,
+      "n_selected": 4,
+      "tickers": [
+        "NFLX",
+        "GOOGL",
+        "META",
+        "MTCH"
+      ]
+    },
+    {
+      "sector": "Communication Services",
+      "vol_tier": "low",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "EA",
+        "DIS",
+        "WBD"
+      ]
+    },
+    {
+      "sector": "Communication Services",
+      "vol_tier": "med",
+      "n_candidates": 4,
+      "n_selected": 4,
+      "tickers": [
+        "T",
+        "TMUS",
+        "CMCSA",
+        "VZ"
+      ]
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "vol_tier": "high",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "TSLA",
+        "BKNG",
+        "NKE"
+      ]
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "vol_tier": "low",
+      "n_candidates": 2,
+      "n_selected": 2,
+      "tickers": [
+        "TJX",
+        "MAR"
+      ]
+    },
+    {
+      "sector": "Consumer Discretionary",
+      "vol_tier": "med",
+      "n_candidates": 7,
+      "n_selected": 4,
+      "tickers": [
+        "AMZN",
+        "F",
+        "LOW",
+        "SBUX"
+      ]
+    },
+    {
+      "sector": "Consumer Staples",
+      "vol_tier": "high",
+      "n_candidates": 2,
+      "n_selected": 2,
+      "tickers": [
+        "GIS",
+        "STZ"
+      ]
+    },
+    {
+      "sector": "Consumer Staples",
+      "vol_tier": "low",
+      "n_candidates": 4,
+      "n_selected": 4,
+      "tickers": [
+        "COST",
+        "PG",
+        "WMT",
+        "KO"
+      ]
+    },
+    {
+      "sector": "Consumer Staples",
+      "vol_tier": "med",
+      "n_candidates": 6,
+      "n_selected": 4,
+      "tickers": [
+        "CL",
+        "MO",
+        "MDLZ",
+        "PM"
+      ]
+    },
+    {
+      "sector": "Crypto",
+      "vol_tier": "high",
+      "n_candidates": 6,
+      "n_selected": 4,
+      "tickers": [
+        "ETH-USD",
+        "AVAX-USD",
+        "MATIC-USD",
+        "DOT-USD"
+      ]
+    },
+    {
+      "sector": "Crypto",
+      "vol_tier": "low",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "BNB-USD",
+        "BTC-USD",
+        "TRX-USD"
+      ]
+    },
+    {
+      "sector": "Crypto",
+      "vol_tier": "med",
+      "n_candidates": 6,
+      "n_selected": 4,
+      "tickers": [
+        "XRP-USD",
+        "LTC-USD",
+        "SOL-USD",
+        "DOGE-USD"
+      ]
+    },
+    {
+      "sector": "Energy",
+      "vol_tier": "high",
+      "n_candidates": 1,
+      "n_selected": 1,
+      "tickers": [
+        "VLO"
+      ]
+    },
+    {
+      "sector": "Energy",
+      "vol_tier": "low",
+      "n_candidates": 5,
+      "n_selected": 4,
+      "tickers": [
+        "SLB",
+        "COP",
+        "KMI",
+        "XOM"
+      ]
+    },
+    {
+      "sector": "Energy",
+      "vol_tier": "med",
+      "n_candidates": 5,
+      "n_selected": 4,
+      "tickers": [
+        "EOG",
+        "OXY",
+        "WMB",
+        "PSX"
+      ]
+    },
+    {
+      "sector": "Financials",
+      "vol_tier": "high",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "GS",
+        "MS",
+        "C"
+      ]
+    },
+    {
+      "sector": "Financials",
+      "vol_tier": "low",
+      "n_candidates": 6,
+      "n_selected": 4,
+      "tickers": [
+        "BAC",
+        "AXP",
+        "TFC",
+        "JPM"
+      ]
+    },
+    {
+      "sector": "Financials",
+      "vol_tier": "med",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "BLK",
+        "WFC",
+        "SCHW"
+      ]
+    },
+    {
+      "sector": "Healthcare",
+      "vol_tier": "high",
+      "n_candidates": 4,
+      "n_selected": 4,
+      "tickers": [
+        "LLY",
+        "GILD",
+        "ABT",
+        "DHR"
+      ]
+    },
+    {
+      "sector": "Healthcare",
+      "vol_tier": "low",
+      "n_candidates": 1,
+      "n_selected": 1,
+      "tickers": [
+        "PFE"
+      ]
+    },
+    {
+      "sector": "Healthcare",
+      "vol_tier": "med",
+      "n_candidates": 7,
+      "n_selected": 4,
+      "tickers": [
+        "UNH",
+        "JNJ",
+        "MRK",
+        "TMO"
+      ]
+    },
+    {
+      "sector": "Industrials",
+      "vol_tier": "high",
+      "n_candidates": 2,
+      "n_selected": 2,
+      "tickers": [
+        "CAT",
+        "NOC"
+      ]
+    },
+    {
+      "sector": "Industrials",
+      "vol_tier": "low",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "GD",
+        "RTX",
+        "UNP"
+      ]
+    },
+    {
+      "sector": "Industrials",
+      "vol_tier": "med",
+      "n_candidates": 7,
+      "n_selected": 4,
+      "tickers": [
+        "HON",
+        "LMT",
+        "BA",
+        "DE"
+      ]
+    },
+    {
+      "sector": "Materials",
+      "vol_tier": "high",
+      "n_candidates": 5,
+      "n_selected": 4,
+      "tickers": [
+        "VMC",
+        "FCX",
+        "DOW",
+        "NEM"
+      ]
+    },
+    {
+      "sector": "Materials",
+      "vol_tier": "low",
+      "n_candidates": 3,
+      "n_selected": 3,
+      "tickers": [
+        "LIN",
+        "ECL",
+        "DD"
+      ]
+    },
+    {
+      "sector": "Materials",
+      "vol_tier": "med",
+      "n_candidates": 4,
+      "n_selected": 4,
+      "tickers": [
+        "SHW",
+        "NUE",
+        "APD",
+        "MLM"
+      ]
+    },
+    {
+      "sector": "Real Estate",
+      "vol_tier": "low",
+      "n_candidates": 11,
+      "n_selected": 4,
+      "tickers": [
+        "VTR",
+        "O",
+        "SPG",
+        "WELL"
+      ]
+    },
+    {
+      "sector": "Real Estate",
+      "vol_tier": "med",
+      "n_candidates": 1,
+      "n_selected": 1,
+      "tickers": [
+        "PLD"
+      ]
+    },
+    {
+      "sector": "Semiconductors",
+      "vol_tier": "high",
+      "n_candidates": 12,
+      "n_selected": 4,
+      "tickers": [
+        "QCOM",
+        "AVGO",
+        "MU",
+        "LRCX"
+      ]
+    },
+    {
+      "sector": "Technology",
+      "vol_tier": "high",
+      "n_candidates": 10,
+      "n_selected": 4,
+      "tickers": [
+        "PANW",
+        "ADBE",
+        "NOW",
+        "ORCL"
+      ]
+    },
+    {
+      "sector": "Technology",
+      "vol_tier": "med",
+      "n_candidates": 2,
+      "n_selected": 2,
+      "tickers": [
+        "AAPL",
+        "MSFT"
+      ]
+    },
+    {
+      "sector": "Utilities",
+      "vol_tier": "low",
+      "n_candidates": 12,
+      "n_selected": 4,
+      "tickers": [
+        "EXC",
+        "XEL",
+        "NEE",
+        "ED"
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.993,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.118,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "META",
+      "sector": "Communication Services",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.379,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MTCH",
+      "sector": "Communication Services",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.222,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "EA",
+      "sector": "Communication Services",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 0.413,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "sector": "Communication Services",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.155,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "WBD",
+      "sector": "Communication Services",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.277,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "T",
+      "sector": "Communication Services",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 3.024,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "TMUS",
+      "sector": "Communication Services",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.95,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "CMCSA",
+      "sector": "Communication Services",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.961,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "VZ",
+      "sector": "Communication Services",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.658,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.445,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.283,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.435,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "TJX",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.155,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MAR",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.127,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.612,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.967,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "LOW",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.943,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "SBUX",
+      "sector": "Consumer Discretionary",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.895,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "GIS",
+      "sector": "Consumer Staples",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.49,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "STZ",
+      "sector": "Consumer Staples",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.246,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "COST",
+      "sector": "Consumer Staples",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.166,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PG",
+      "sector": "Consumer Staples",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.242,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "WMT",
+      "sector": "Consumer Staples",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.389,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "KO",
+      "sector": "Consumer Staples",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.301,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "CL",
+      "sector": "Consumer Staples",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.508,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MO",
+      "sector": "Consumer Staples",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.487,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MDLZ",
+      "sector": "Consumer Staples",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.678,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PM",
+      "sector": "Consumer Staples",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.945,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ETH-USD",
+      "sector": "Crypto",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.118,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "AVAX-USD",
+      "sector": "Crypto",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.087,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "MATIC-USD",
+      "sector": "Crypto",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.719,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2023-07-19",
+          "end_date": "2024-02-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2024-08-22",
+          "end_date": "2025-03-09"
+        }
+      ]
+    },
+    {
+      "ticker": "DOT-USD",
+      "sector": "Crypto",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.89,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "BNB-USD",
+      "sector": "Crypto",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 1.832,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "BTC-USD",
+      "sector": "Crypto",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.191,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "TRX-USD",
+      "sector": "Crypto",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 0.957,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "XRP-USD",
+      "sector": "Crypto",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.531,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "LTC-USD",
+      "sector": "Crypto",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.836,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "SOL-USD",
+      "sector": "Crypto",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.651,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "DOGE-USD",
+      "sector": "Crypto",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.588,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-11-16",
+          "end_date": "2025-06-03"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-12-21",
+          "end_date": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "sector": "Energy",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.473,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "SLB",
+      "sector": "Energy",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.303,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "COP",
+      "sector": "Energy",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.334,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "KMI",
+      "sector": "Energy",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.023,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "sector": "Energy",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.165,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "EOG",
+      "sector": "Energy",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.421,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "OXY",
+      "sector": "Energy",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.829,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "WMB",
+      "sector": "Energy",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.581,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PSX",
+      "sector": "Energy",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.787,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "GS",
+      "sector": "Financials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.462,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MS",
+      "sector": "Financials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.355,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "C",
+      "sector": "Financials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.082,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "sector": "Financials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.037,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "AXP",
+      "sector": "Financials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.397,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "TFC",
+      "sector": "Financials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.28,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "sector": "Financials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.266,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "BLK",
+      "sector": "Financials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.851,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "sector": "Financials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.609,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "SCHW",
+      "sector": "Financials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.436,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "sector": "Healthcare",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.215,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "GILD",
+      "sector": "Healthcare",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.288,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ABT",
+      "sector": "Healthcare",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.137,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "DHR",
+      "sector": "Healthcare",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.009,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PFE",
+      "sector": "Healthcare",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.015,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "UNH",
+      "sector": "Healthcare",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.974,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "sector": "Healthcare",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.591,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.852,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "TMO",
+      "sector": "Healthcare",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.662,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "CAT",
+      "sector": "Industrials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.496,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NOC",
+      "sector": "Industrials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.204,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "GD",
+      "sector": "Industrials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.038,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "sector": "Industrials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.374,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "UNP",
+      "sector": "Industrials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 1.759,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "HON",
+      "sector": "Industrials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.951,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "LMT",
+      "sector": "Industrials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.609,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "BA",
+      "sector": "Industrials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.987,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "DE",
+      "sector": "Industrials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 3.041,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "VMC",
+      "sector": "Materials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.122,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "FCX",
+      "sector": "Materials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.283,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "DOW",
+      "sector": "Materials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.427,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NEM",
+      "sector": "Materials",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 3.485,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "LIN",
+      "sector": "Materials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.135,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ECL",
+      "sector": "Materials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.316,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "DD",
+      "sector": "Materials",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.395,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "SHW",
+      "sector": "Materials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.743,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NUE",
+      "sector": "Materials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.507,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "APD",
+      "sector": "Materials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.436,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MLM",
+      "sector": "Materials",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.815,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "VTR",
+      "sector": "Real Estate",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.032,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "O",
+      "sector": "Real Estate",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 1.834,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "SPG",
+      "sector": "Real Estate",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 1.943,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "WELL",
+      "sector": "Real Estate",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.001,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PLD",
+      "sector": "Real Estate",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.423,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "sector": "Semiconductors",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.771,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Semiconductors",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.151,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MU",
+      "sector": "Semiconductors",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 7.92,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "sector": "Semiconductors",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 7.963,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "sector": "Technology",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 5.604,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "sector": "Technology",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 4.531,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NOW",
+      "sector": "Technology",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 6.13,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "vol_tier": "high",
+      "atr14_pct_at_sample_time": 5.307,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "sector": "Technology",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.488,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "sector": "Technology",
+      "vol_tier": "med",
+      "atr14_pct_at_sample_time": 2.761,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "EXC",
+      "sector": "Utilities",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.239,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "XEL",
+      "sector": "Utilities",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.107,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "NEE",
+      "sector": "Utilities",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 1.647,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "ticker": "ED",
+      "sector": "Utilities",
+      "vol_tier": "low",
+      "atr14_pct_at_sample_time": 2.065,
+      "windows": [
+        {
+          "window_id": "A_older",
+          "start_date": "2024-02-07",
+          "end_date": "2024-11-20"
+        },
+        {
+          "window_id": "B_recent",
+          "start_date": "2025-09-12",
+          "end_date": "2026-06-30"
+        }
+      ]
+    }
+  ]
+}

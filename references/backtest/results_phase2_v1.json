@@ -1,0 +1,3940 @@
+{
+  "summary": {
+    "_meta": {
+      "dataset_version": "v1",
+      "n_samples": 108,
+      "hold_check_sessions": 5,
+      "note": "raw stats only -- no pass/fail declared, see ENGINE_ARCHITECTURE.md Backtest process"
+    },
+    "sr_engine": {
+      "candidate_S1_support_hold": {
+        "n": 216,
+        "hold_rate": 0.7917
+      },
+      "baseline_S1_support_hold": {
+        "n": 205,
+        "hold_rate": 0.9366
+      },
+      "candidate_R1_resistance_hold": {
+        "n": 216,
+        "hold_rate": 0.4306
+      },
+      "baseline_R1_resistance_hold": {
+        "n": 189,
+        "hold_rate": 0.7672
+      }
+    },
+    "row1_pullback": {
+      "n_triggered": 98,
+      "target_first": 76,
+      "stop_first": 21,
+      "undetermined": 1,
+      "win_rate_all_decided": {
+        "n_decided": 97,
+        "win_rate": 0.7835
+      },
+      "win_rate_gate_pass": {
+        "n_decided": 82,
+        "win_rate": 0.7805
+      },
+      "win_rate_gate_fail": {
+        "n_decided": 15,
+        "win_rate": 0.8
+      },
+      "n_gate_pass": 83,
+      "n_gate_fail": 15
+    },
+    "row2_breakout": {
+      "n_triggered": 8,
+      "target_first": 5,
+      "stop_first": 3,
+      "undetermined": 0,
+      "win_rate_all_decided": {
+        "n_decided": 8,
+        "win_rate": 0.625
+      },
+      "win_rate_gate_pass": {
+        "n_decided": 7,
+        "win_rate": 0.5714
+      },
+      "win_rate_gate_fail": {
+        "n_decided": 1,
+        "win_rate": 1.0
+      },
+      "n_gate_pass": 7,
+      "n_gate_fail": 1
+    },
+    "row3_meanrev_gate_0.5": {
+      "n_triggered": 1,
+      "target_first": 1,
+      "stop_first": 0,
+      "undetermined": 0,
+      "win_rate_all_decided": {
+        "n_decided": 1,
+        "win_rate": 1.0
+      },
+      "win_rate_gate_pass": {
+        "n_decided": 0,
+        "win_rate": null
+      },
+      "win_rate_gate_fail": {
+        "n_decided": 1,
+        "win_rate": 1.0
+      },
+      "n_gate_pass": 0,
+      "n_gate_fail": 1
+    }
+  },
+  "sr_results": [
+    {
+      "case": "NFLX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "NFLX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GOOGL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GOOGL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "META/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "META/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "MTCH/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MTCH/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "EA/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "EA/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "DIS/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "DIS/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "WBD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "WBD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "T/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "T/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TMUS/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "TMUS/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "CMCSA/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "CMCSA/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VZ/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "VZ/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TSLA/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TSLA/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BKNG/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "BKNG/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NKE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NKE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TJX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "TJX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MAR/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MAR/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AMZN/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "AMZN/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "F/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "F/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LOW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LOW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SBUX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SBUX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GIS/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GIS/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "STZ/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "STZ/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "COST/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "COST/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PG/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "PG/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "WMT/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "WMT/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "KO/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "KO/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "CL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "CL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "MO/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "MO/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "MDLZ/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MDLZ/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "ETH-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ETH-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AVAX-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AVAX-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MATIC-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MATIC-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOT-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOT-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BNB-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BNB-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BTC-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BTC-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TRX-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "TRX-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "XRP-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "XRP-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LTC-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LTC-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "SOL-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "SOL-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOGE-USD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOGE-USD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VLO/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VLO/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SLB/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "SLB/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "COP/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "COP/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "KMI/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "KMI/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "XOM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "XOM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "EOG/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "EOG/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "OXY/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "OXY/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "WMB/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "WMB/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PSX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PSX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "GS/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GS/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MS/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "MS/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "C/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "C/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BAC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "BAC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "AXP/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "AXP/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TFC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "TFC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "JPM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "JPM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "BLK/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BLK/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "WFC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "WFC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "SCHW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "SCHW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "LLY/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LLY/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "GILD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GILD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "ABT/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ABT/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DHR/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DHR/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PFE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PFE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "UNH/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "UNH/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "JNJ/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "JNJ/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "MRK/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MRK/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "TMO/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "TMO/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "CAT/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "CAT/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "NOC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NOC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "GD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "RTX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "RTX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "UNP/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "UNP/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "HON/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "HON/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LMT/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LMT/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BA/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "BA/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "DE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VMC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VMC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "FCX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "FCX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DOW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NEM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NEM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LIN/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LIN/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "ECL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ECL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "DD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "SHW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SHW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "NUE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NUE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "APD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "APD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "MLM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MLM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VTR/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "VTR/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "O/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "O/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SPG/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "SPG/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "WELL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "WELL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "PLD/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "PLD/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "QCOM/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "QCOM/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AVGO/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AVGO/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MU/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MU/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "LRCX/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "LRCX/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "PANW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": false,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "PANW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "ADBE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ADBE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NOW/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "NOW/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ORCL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "ORCL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AAPL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "AAPL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      }
+    },
+    {
+      "case": "MSFT/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "MSFT/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "EXC/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "EXC/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "XEL/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": false
+      }
+    },
+    {
+      "case": "XEL/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NEE/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "NEE/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ED/A_older",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    },
+    {
+      "case": "ED/B_recent",
+      "candidate": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": false
+      },
+      "baseline": {
+        "s1_evaluated": true,
+        "s1_held": true,
+        "r1_evaluated": true,
+        "r1_held": true
+      }
+    }
+  ],
+  "row1_results": [
+    {
+      "case": "NFLX/A_older",
+      "rr": 4.18,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "GOOGL/A_older",
+      "rr": 3.22,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "MTCH/B_recent",
+      "rr": 4.07,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "EA/A_older",
+      "rr": 2.83,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "EA/B_recent",
+      "rr": 2.43,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "DIS/A_older",
+      "rr": 5.36,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WBD/A_older",
+      "rr": 2.65,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "T/A_older",
+      "rr": 1.89,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TMUS/A_older",
+      "rr": 3.98,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TSLA/A_older",
+      "rr": 4.17,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "BKNG/A_older",
+      "rr": 2.55,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "BKNG/B_recent",
+      "rr": 1.76,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TJX/A_older",
+      "rr": 1.93,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MAR/A_older",
+      "rr": 3.96,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "AMZN/A_older",
+      "rr": 4.39,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "LOW/B_recent",
+      "rr": 1.18,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SBUX/A_older",
+      "rr": 2.05,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SBUX/B_recent",
+      "rr": 2.19,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "GIS/B_recent",
+      "rr": 2.93,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "STZ/A_older",
+      "rr": 1.2,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "COST/A_older",
+      "rr": 3.93,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "PG/A_older",
+      "rr": 2.49,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WMT/A_older",
+      "rr": 3.07,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "KO/B_recent",
+      "rr": 3.24,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "CL/B_recent",
+      "rr": 1.4,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MO/A_older",
+      "rr": 3.28,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MO/B_recent",
+      "rr": 2.68,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "PM/A_older",
+      "rr": 3.16,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "PM/B_recent",
+      "rr": 2.14,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "ETH-USD/A_older",
+      "rr": 1.62,
+      "gate_pass": false,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "ETH-USD/B_recent",
+      "rr": 1.99,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "BNB-USD/A_older",
+      "rr": 3.19,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "TRX-USD/A_older",
+      "rr": 2.62,
+      "gate_pass": true,
+      "outcome": "same_bar_ambiguous"
+    },
+    {
+      "case": "TRX-USD/B_recent",
+      "rr": 2.87,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SOL-USD/B_recent",
+      "rr": 1.12,
+      "gate_pass": false,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "VLO/A_older",
+      "rr": 1.87,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "VLO/B_recent",
+      "rr": 2.08,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SLB/A_older",
+      "rr": 2.45,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "COP/A_older",
+      "rr": 2.14,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "KMI/A_older",
+      "rr": 3.87,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "XOM/A_older",
+      "rr": 2.23,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "EOG/A_older",
+      "rr": 2.54,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WMB/A_older",
+      "rr": 3.52,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WMB/B_recent",
+      "rr": 2.98,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "PSX/A_older",
+      "rr": 2.07,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "GS/A_older",
+      "rr": 3.97,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MS/A_older",
+      "rr": 3.37,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "C/A_older",
+      "rr": 2.79,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "C/B_recent",
+      "rr": 3.55,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "BAC/A_older",
+      "rr": 3.03,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "BAC/B_recent",
+      "rr": 3.71,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "AXP/A_older",
+      "rr": 3.97,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "AXP/B_recent",
+      "rr": 1.65,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TFC/A_older",
+      "rr": 3.16,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TFC/B_recent",
+      "rr": 3.29,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "JPM/A_older",
+      "rr": 3.1,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "JPM/B_recent",
+      "rr": 1.73,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "BLK/A_older",
+      "rr": 3.61,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "WFC/A_older",
+      "rr": 3.06,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WFC/B_recent",
+      "rr": 1.88,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SCHW/A_older",
+      "rr": 4.55,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SCHW/B_recent",
+      "rr": 2.94,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "LLY/B_recent",
+      "rr": 2.96,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "ABT/B_recent",
+      "rr": 2.44,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "DHR/B_recent",
+      "rr": 3.12,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "UNH/A_older",
+      "rr": 5.22,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "UNH/B_recent",
+      "rr": 3.09,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "JNJ/B_recent",
+      "rr": 4.05,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MRK/B_recent",
+      "rr": 3.59,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TMO/B_recent",
+      "rr": 2.88,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "CAT/B_recent",
+      "rr": 2.6,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "RTX/B_recent",
+      "rr": 2.96,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "UNP/B_recent",
+      "rr": 2.16,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "HON/A_older",
+      "rr": 6.12,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "DE/B_recent",
+      "rr": 2.49,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "VMC/A_older",
+      "rr": 6.13,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "VMC/B_recent",
+      "rr": 3.56,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "LIN/B_recent",
+      "rr": 2.02,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "ECL/B_recent",
+      "rr": 2.73,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SHW/B_recent",
+      "rr": 3.04,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "APD/A_older",
+      "rr": 2.55,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "VTR/B_recent",
+      "rr": 2.83,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "O/B_recent",
+      "rr": 2.4,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SPG/A_older",
+      "rr": 2.33,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "SPG/B_recent",
+      "rr": 3.73,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WELL/A_older",
+      "rr": 2.73,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "WELL/B_recent",
+      "rr": 2.86,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "MU/B_recent",
+      "rr": 2.91,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "LRCX/B_recent",
+      "rr": 1.8,
+      "gate_pass": false,
+      "outcome": "target_first"
+    },
+    {
+      "case": "PANW/A_older",
+      "rr": 4.31,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "PANW/B_recent",
+      "rr": 4.31,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "NOW/A_older",
+      "rr": 3.97,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "ORCL/A_older",
+      "rr": 2.95,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "EXC/B_recent",
+      "rr": 2.18,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "XEL/A_older",
+      "rr": 2.87,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "XEL/B_recent",
+      "rr": 2.94,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "NEE/B_recent",
+      "rr": 1.78,
+      "gate_pass": false,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "ED/B_recent",
+      "rr": 2.55,
+      "gate_pass": true,
+      "outcome": "target_first"
+    }
+  ],
+  "row2_results": [
+    {
+      "case": "NFLX/A_older",
+      "rr": 1.68,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "EA/A_older",
+      "rr": 3.27,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "WBD/A_older",
+      "rr": 2.07,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "TSLA/B_recent",
+      "rr": 1.79,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "DE/B_recent",
+      "rr": 4.46,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "APD/B_recent",
+      "rr": 5.47,
+      "gate_pass": true,
+      "outcome": "target_first"
+    },
+    {
+      "case": "LRCX/B_recent",
+      "rr": 1.6,
+      "gate_pass": true,
+      "outcome": "stop_first"
+    },
+    {
+      "case": "PANW/B_recent",
+      "rr": 1.44,
+      "gate_pass": false,
+      "outcome": "target_first"
+    }
+  ],
+  "row3_results": [
+    {
+      "case": "EOG/B_recent",
+      "rr": 0.38,
+      "gate_pass": false,
+      "outcome": "target_first"
+    }
+  ]
+}
