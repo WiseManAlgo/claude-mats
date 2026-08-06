@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "_meta": {
+      "n_events": 5671,
+      "horizon": 10,
+      "retest_wait": 5,
+      "note": "entry=pivot model (corrected). expectancy_R>0 = profitable. target_first=+2R, stop_first=-1R, else mark-to-market. raw stats, no pass/fail."
+    },
+    "comparison": [
+      {
+        "label": "V0 baseline: LIMIT at pivot (interp A)",
+        "n": 5671,
+        "expectancy_R": 1.2411,
+        "win_2R_rate": 0.7463,
+        "stop_rate": 0.2525,
+        "median_mae": 0.0,
+        "avg_risk_pct": 1.641
+      },
+      {
+        "label": "V1 limit@pivot, chase 3%",
+        "n": 3705,
+        "expectancy_R": 0.9485,
+        "win_2R_rate": 0.6483,
+        "stop_rate": 0.3498,
+        "median_mae": -0.0013,
+        "avg_risk_pct": 1.263
+      },
+      {
+        "label": "V2 limit@pivot, chase 2%",
+        "n": 2862,
+        "expectancy_R": 0.7732,
+        "win_2R_rate": 0.5898,
+        "stop_rate": 0.4081,
+        "median_mae": -0.005,
+        "avg_risk_pct": 1.202
+      },
+      {
+        "label": "V2b limit@pivot, chase 1%",
+        "n": 1647,
+        "expectancy_R": 0.4809,
+        "win_2R_rate": 0.4924,
+        "stop_rate": 0.5058,
+        "median_mae": -0.0089,
+        "avg_risk_pct": 1.132
+      },
+      {
+        "label": "V3 break-and-retest (pullback to pivot)",
+        "n": 3220,
+        "expectancy_R": 0.084,
+        "win_2R_rate": 0.3606,
+        "stop_rate": 0.6382,
+        "median_mae": -0.0167,
+        "avg_risk_pct": 1.632
+      },
+      {
+        "label": "B  enter at breakout CLOSE (confirm-then-market, chase5%)",
+        "n": 5671,
+        "expectancy_R": 0.1262,
+        "win_2R_rate": 0.2493,
+        "stop_rate": 0.477,
+        "median_mae": -0.0257,
+        "avg_risk_pct": 4.712
+      },
+      {
+        "label": "B  enter at CLOSE, only if close<=5% over pivot",
+        "n": 4576,
+        "expectancy_R": 0.1021,
+        "win_2R_rate": 0.2627,
+        "stop_rate": 0.5216,
+        "median_mae": -0.0224,
+        "avg_risk_pct": 3.028
+      },
+      {
+        "label": "B' enter at NEXT day OPEN",
+        "n": 5565,
+        "expectancy_R": 0.0811,
+        "win_2R_rate": 0.223,
+        "stop_rate": 0.474,
+        "median_mae": -0.0263,
+        "avg_risk_pct": 4.912
+      }
+    ]
+  },
+  "n_events": 5671
+}
